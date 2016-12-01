@@ -4,16 +4,14 @@ title:  "Adding CSS To My First Sinatra App"
 date:   2016-09-11 21:04:36 -0400
 ---
 
-When I started building my own Sinatra web app, I didn't bother thinking about how the format and design of the page would be. It just was not important. But when I saw other Sinatra web apps, I decided I must add CSS to my own app because I realized how much more pleasant a designed web app is. 
+When I started building my own Sinatra web app, I didn't bother thinking the design of the. It did not seem important. Then when I saw other Sinatra web apps, I decided I must add CSS to my own app because I saw what a difference it made. 
 
-At first I thought it would be easy -  link the CSS file to the ERB file. Turns out, that I hadn't read the documentation on were exactly the CSS file belongs, and that got me in to some trouble. 
+At first, I thought it would be easy -  link the ERB file to the CSS file.  But whatever I would do, I could not get the ERB page to link to the CSS stylepage. I did not know what was wrong and so I made a quick Google search. 
 
-Whatever I would try to do, I could not get the CSS stylepage to link to my ERB page. I did not know what was wrong.  That's when I decided to make a Google search. 
+I found a page on stackoverflow that said “by default Sinatra will allow CSS files to be accessed only if they are in a directory in the root of the app named public”. So, I created a public directory in the root of the app and moved the CSS stylesheet in to it. I was sure that now everything will run smoothly.  But CSS stylesheet was still not loading. So, I tried some different ideas, and then made another Google search.
 
-I Googled `sinatra CSS` and I found a page on stackoverflow that said that by default Sinatra will allow CSS files to be accessed only if they are in a dirctory in the root of the app named public. When I read this, I created a public directory in the root of the app and moved the CSS stylesheet in to it. I was sure that now everything will run smoothly, and I will finally have a gorgeous web application.  But I still was in trouble. The CSS stylesheet was not loading. So I tried some different ideas, and then made a Google search.
+After reading the Sinatra documentation I found the problem. The public directory name is not supposed to be included in the URL that is in the link tag in the ERB. I removed the public directory from the path and then the CSS loaded. 
 
-After a few minutes, I found out that there was an issue with the way I was requiring the stylesheet in the link tag of my ERB file. Even though the stylesheet is inside a directory name public, when you require that stylesheet at the at the link tag of the ERB file, you do not add to the href atribute a direct path that includes the public directory.  Instead, you need to ommit the public directory altogether. So I went to the link tag in my ERB file, and by the href attribute, I changed it to: `href="/style.css"` making sure to skip the public directory. 
+I also learned that it is a good idea to use a direct path to the CSS file if you will be linking one stylesheet to many ERB files and they are at different levels in the path.
 
-Finally my web app was loading the CSS Stylesheet and it looked awesome.
-
-For the actual fun part of cutomizing the page with CSS, I found a site called [Web Design in 4 minutes](http://http://jgthms.com/web-design-in-4-minutes/#content) that saved me a lot of time. 
+For the actual CSS I used, I found a site called [Web Design in 4 minutes](http://http://jgthms.com/web-design-in-4-minutes/#content) that saved me a lot of time. 
