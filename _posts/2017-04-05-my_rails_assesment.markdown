@@ -5,9 +5,11 @@ date:   2017-04-04 20:59:29 -0400
 ---
 
 
-Building my first rails app was awesome. It helped me put together everything I had learned throughout the course about rails. I especially  became comfortable using `form_for` helper and `fields_for` helper for the complex form I built.  I also learned how to use the devise gem which was fun.  Some of the lessons I learned:
+Building my first rails app was awesome. It helped me put together everything I had learned throughout the rails course. I especially  became comfortable using `form_for` helper and `fields_for` helper for the complex form I built, and learned how to customize the devise gem.  
 
-If you want rails to generate a `field_with_errors` div for the nested part of the form you must add `accepts_nested_attributes_for :model` macro. It took me a while to figure this out because I was using a custom attribute writer to accept the nested attributes. After I added that macro, it created those error divs. Here is what my model looks like:
+Some of the lessons I learned:
+
+If you need rails to generate a `field_with_errors` div for the nested part of the form, you must add `accepts_nested_attributes_for :model` macro. It took me a while to figure this out because I was using a custom attribute writer to accept the nested attributes. After I added that macro, it created those error divs. Here is what my model looks like:
 
 ```
 # appointment model
