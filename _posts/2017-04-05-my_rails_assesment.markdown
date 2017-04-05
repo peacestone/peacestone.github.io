@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "My Rails Assesment"
-date:   2017-04-05 00:59:28 +0000
+title:  "My First Rails App"
+date:   2017-04-04 20:59:29 -0400
 ---
 
 
