@@ -1,11 +1,13 @@
 ---
 layout: post
 title:  "Accessing React Router's History Object"
-date:   2017-09-03 15:35:33 +0000
+date:   2017-09-03 11:35:34 -0400
 ---
 
 
-On my recent react project, I had a component that did have react routers history props passed in to it. I was able to get those props passed down to the component by  importing  `withRouter`   from `react-router` and exporting my component with `withRouter` taking my component as an argument.
+On my recent react project, I had a component that did have react routers history props passed in to it. I was able to get those props passed down to the component by  importing  `withRouter`   from `react-router` and exporting my component with `withRouter` taking my component as an argument. 
 
 ```export default withRouter(myAwesomeComponent)```
+
+I then had accesse to the history object in my props, and was able to push a new entry in to the history object. 
 
