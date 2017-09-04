@@ -14,4 +14,4 @@ After reading the Sinatra documentation I found the problem. The public director
 
 I also learned that it is a good idea to use a direct path to the CSS file if you will be linking one stylesheet to many ERB files and they are at different levels in the path.
 
-For the actual CSS I used, I found a site called [Web Design in 4 minutes](http://http://jgthms.com/web-design-in-4-minutes/#content) that saved me a lot of time. 
+For the actual CSS I used, I found a site called [Web Design in 4 minutes](http://jgthms.com/web-design-in-4-minutes/#content) that saved me a lot of time. 
