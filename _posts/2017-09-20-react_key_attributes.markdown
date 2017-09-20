@@ -15,13 +15,13 @@ const namesList = names.map((name, index) => <li key={index}>{name}</li>
 
 If you forget to add the key attribute, React will gently remind you with a warning message in the browser console. But why does React need a key attribute? 
 
-It's about rebuilding the children in it's DOM node efficiently. React recurses over each child in the DOM node. If the child is the same as it was at its previous state, it will keep it. If the child is different from it's previous state, React will mutate the current child and all future children that have not yet been evaluated. For example lets say we have two children in a node:
+It's about rebuilding the children in it's DOM node efficiently. React recurses over each child in the DOM node. If the child is the same as it was at it's previous state, it will keep it. If the child is different from it's previous state, React will mutate the current child and all future children that have not yet been evaluated. For example lets say we have two children in a node:
 
 ```
 <ul>
-      <li>Emma</li>
-			<li>Liam</li>
-	</ul>
+   <li>Emma</li>
+	 <li>Liam</li>
+</ul>
 
 ```
 
@@ -32,7 +32,7 @@ We then insert a third child to the beginning of the list:
 			<li>Olivia</li>
       <li>Emma</li>
 			<li>Liam</li>
-	</ul>
+</ul>
 ```
 
 Since the first child has no longer the value of Emma, React will mutate all of the children in the node. This is inefficient, and can be problematic.
@@ -45,10 +45,10 @@ When we add a unique identifier (key attribute) for each child, React is able to
 
 ```
 <ul>
-			<li key='3' >Olivia</li>
-      <li key='1' >Emma</li>
-			<li key='2' >Liam</li>
-	</ul>
+		<li key='3' >Olivia</li>
+    <li key='1' >Emma</li>
+		<li key='2' >Liam</li>
+</ul>
 ```
 
 
