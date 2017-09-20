@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "React Key Attributes"
-date:   2017-09-20 03:34:59 +0000
+date:   2017-09-19 23:35:00 -0400
 ---
 
 Anytime you transform an array to a list of components in React,  you need to add a key attribute to each item:
