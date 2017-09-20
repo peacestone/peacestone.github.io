@@ -15,7 +15,7 @@ const namesList = names.map((name, index) => <li key={index}>{name}</li>
 
 If you forget to add the key attribute, React will gently remind you with a warning message in the browser console. But why does React need a key attribute? 
 
-It's about rebuilding the children a DOM node efficiently. React recurses over each child in the DOM node. If the child is the same as it was at its previous state, it will keep it. If the child is different from it's previous state, React will mutate the current child and all future children that have not yet been evaluated. For example lets say we have two children in a node:
+It's about rebuilding the children in it's DOM node efficiently. React recurses over each child in the DOM node. If the child is the same as it was at its previous state, it will keep it. If the child is different from it's previous state, React will mutate the current child and all future children that have not yet been evaluated. For example lets say we have two children in a node:
 
 ```
 <ul>
