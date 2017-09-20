@@ -29,10 +29,11 @@ We then insert a third child to the beginning of the list:
 
 ```
 <ul>
-			<li>Olivia</li>
+			<li>Olivia</li>  
       <li>Emma</li>
 			<li>Liam</li>
 </ul>
+
 ```
 
 Since the first child has no longer the value of Emma, React will mutate all of the children in the node. This is inefficient, and can be problematic.
