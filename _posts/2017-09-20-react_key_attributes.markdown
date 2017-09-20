@@ -54,6 +54,6 @@ When we add a unique identifier (key attribute) for each child, React is able to
 
 This all took me some time to comprehend. Now that I have my mind wrapped around this, I find it fascinating the amount of logic that goes behind deciding when to update a component, and I of course enjoy adding keys to lists of children. 
 
-You can check out the React docs about keys by [clicking here](https://facebook.github.io/react/docs/reconciliation.html#recursing-on-children).
+You can check out the React docs about keys by [clicking here](https://facebook.github.io/react/docs/reconciliation.html#recursing-on-children). 
 
 
