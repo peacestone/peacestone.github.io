@@ -1,12 +1,12 @@
 # Site settings
-title: Hello World
+title: Sholom's Notepad
 header-img: img/home-bg.png
 email: boruchsteinmetz@outlook.com
 copyright_name: peacestone
 description: > # this means to ignore newlines until "baseurl:"
-  My coding journey
+  What my coding experience has taught me
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: 
+twitter_username: shsteinm
 github_username:  peacestone
 learn_profile: peacestone
 email_username: boruchsteinmetz@outlook.com
