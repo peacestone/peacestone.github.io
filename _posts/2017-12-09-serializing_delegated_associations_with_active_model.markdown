@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Serializing Delegated Associations with Active Model"
-date:       2017-12-10 03:38:25 +0000
+date:       2017-12-09 22:38:26 -0500
 permalink:  serializing_delegated_associations_with_active_model
 ---
 
@@ -60,7 +60,7 @@ end
 
 For serialization I used active model serializers. At first I was not sure how I would serialize the delegated route object with its own associations (departure_airport and arrival_airport) to the reservation model. I thought that `belongs_to :route`  would not work in the reservation serializer model because route does not directly belong to a reservation and does not have a reservation id attribute. 
 
-I decided to try it out anyways, because possibly `belongs to :route` in this context only invokes the delegated route association and serializes its return object. My guess turned to be correct and the delgatated route object was serialized as well as its own belongs to associations (departure_airport and arrival_airport).
+I decided to try it out anyways because what if `belongs to :route` in this context only invokes the delegated route association and serializes its return object. My guess turned out to be correct and the delgatated route object was serialized as well as its own belongs to associations (departure_airport and arrival_airport).
 
 ```
 class ReservationSerializer < ActiveModel::Serializer
@@ -78,5 +78,5 @@ end
 
 I learned from this experience that when in doubt, trust your own instincts and don't give up.
 
-[Checkout the projects githu repo by clicking here](https://github.com/peacestone/juliet_airways_api)
+[Checkout the projects github repo by clicking here](https://github.com/peacestone/juliet_airways_api)
 
