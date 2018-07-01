@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Grouping Ruby Objects"
-date:       2018-07-01 17:38:19 +0000
+date:       2018-07-01 13:38:20 -0400
 permalink:  grouping_ruby_objects
 ---
 
