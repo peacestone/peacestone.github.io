@@ -7,8 +7,7 @@ permalink:  wierd_javascript_cases
 
 Recently I attended a JavaScript meetup in Montreal and I learned about some interesting JavaScript quirks and decided to write about some of them.
 
-**Template Literal Interpolation with an Object**
---------------------------------------------------
+## Template Literal Interpolation with an Object ##
 
 With template literals, we are able to interpolate expressions in our templates by using `${}` notation. An interesting case is that if we insert an object or array to interpolate the `.toString()` method is called on that item. In the code below we have an empty object literal that we are interpolating. The results are the same as if we were to call `.toString()` on it.
 
@@ -28,8 +27,8 @@ What is important to remember when it comes to interpolation is that it is reall
 //results: [,]
 ```
 
-**Labels**
--------
+## Labels ##
+
 Labels allow us to name a JavaScript block or loop in order to reference it in a `continue` or `break` statement. In the example below, I named the block of the if statement as fooLabel. I then am able to break out of the fooLabel block by using the `break` statement referencing the fooLabel block to break out of. That's why the second console.log doesn’t get executed.
 
 ```js
@@ -58,8 +57,8 @@ console.log(variable)
 
 In general, labels aren't used in JavaScript code and [MDN’s page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) about labels has a note saying it is uncommon and usually a function could be returned to jump loops.
 
-**ParseInt Function with a string of letters**
----------------------------------------------
+## ParseInt Function with a string of letters ##
+
 I've used `parseInt` for converting strings with numbers to integers. What I didn't know is that if the radix is set above 10 (in the optional second argument), it will also consider letters to represent numbers from 10 and above. If the letter is out of range it will return NaN. If the letter that is out of range is together with a letter that is in range it will evaluate the first letter and ignore the letters out or range. Here are a few examples:
 
 ```js
